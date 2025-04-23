@@ -45,6 +45,7 @@ jobs:
               "sdl2"
               "molten-vk"
               "winetricks"
+              "ffmpeg"
           )
 
           brew update
