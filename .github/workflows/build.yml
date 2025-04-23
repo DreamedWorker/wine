@@ -1,8 +1,6 @@
 name: Build Wine
 
 on:
-  pull_request:
-  push:
   workflow_dispatch:
 
 env: 
@@ -45,7 +43,6 @@ jobs:
               "sdl2"
               "molten-vk"
               "winetricks"
-              "ffmpeg"
           )
 
           brew update
@@ -64,9 +61,6 @@ jobs:
         run: |
           echo "Brew Libs"
           ls $(brew --prefix)/lib
-
-          echo "FFmpeg Libs" 
-          ls $(brew --prefix ffmpeg@7)/lib
 
           echo "GStreamer Libs"
           ls $(brew --prefix gstreamer)/lib/gstreamer-1.0
